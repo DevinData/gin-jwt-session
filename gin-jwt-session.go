@@ -272,6 +272,8 @@ func SetTokenString(c *gin.Context, tokenString string, seconds int) (err error)
 			Path:     "/",
 			MaxAge:   seconds,
 			HttpOnly: true,
+			SameSite: 4,
+			Secure:   true,
 		},
 	})
 }
